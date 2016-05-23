@@ -17,12 +17,12 @@
         <url-pattern>*.do</url-pattern>
     </servlet-mapping>
     <listener>
-        <listener-class>org.springframework.web.context.ContextLoader</listener-class>
+        <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
     </listener>
     <context-param>
-        <param-name>contextConfigLocation</param-name>
-        <param-value>classpath:app*.xml</param-value>
-    </context-param>
+  		<param-name>contextConfigLocation</param-name>
+  		<param-value>/WEB-INF/classes/applicationContext.xml</param-value>
+ 	</context-param>
     <filter>
         <filter-name>OpenSession</filter-name>
         <filter-class>org.springframework.orm.hibernate3.support.OpenSessionInViewFilter</filter-class>

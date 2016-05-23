@@ -348,20 +348,20 @@
 			</div>
 			<!--------->
 			<div class="tp3_1">
-				<s:iterator value="hList" var="p">
+				<s:forEach items="${hList}" var="p">
 					<div class="tp3_2">
 					<div class="tp3_3">
-						<img src="${pageContext.request.contextPath}/<s:property value="#p.pid" />" alt="" />
+						<img src="${pageContext.request.contextPath}/${p.pid}" alt="" />
 					</div>
 					<div class="tp3_4">
-						<span class="jg">￥<s:property value="#p.shop_price" /></span>
-						<span class="linek">￥<s:property value="#p.market_price" /></span>
+						<span class="jg">￥${listqiang.shop_price}</span>
+						<span class="linek">￥${listqiang.market_price}</span>
 					</div>
 					<div class="tio">
-						<a href="${ pageContext.request.contextPath }/product.do?p=findByPid&pid=<s:property value="#p.pid" />">性感V领蕾丝网纱沙滩裙</a>
+						<a href="${ pageContext.request.contextPath }/product.do?p=findByPid&pid=${p.pid}">性感V领蕾丝网纱沙滩裙</a>
 					</div>
 				  </div>
-				</s:iterator>	   
+				</s:forEach>	   
 			</div>
 			<!---------------------三区开始----------->
 			<!----------------->
@@ -374,20 +374,20 @@
 			</div>
 			</div>
 			<div class="tp3_1">
-				<s:iterator value="nList" var="p">
+				<s:forEach items="${hList}" var="p">
 					<div class="tp3_2">
 					<div class="tp3_3">
-						<img src="${pageContext.request.contextPath}/<s:property value="#p.pid" />" alt="" />
+						<img src="${pageContext.request.contextPath}/${p.pid}" alt="" />
 					</div>
 					<div class="tp3_4">
-						<span class="jg">￥<s:property value="#p.shop_price" /></span>
-						<span class="linek">￥<s:property value="#p.market_price" /></span>
+						<span class="jg">￥${listqiang.shop_price}</span>
+						<span class="linek">￥${listqiang.market_price}</span>
 					</div>
 					<div class="tio">
-						<a href="${ pageContext.request.contextPath }/product.do?p=findByPid&pid=<s:property value="#p.pid" />">性感V领蕾丝网纱沙滩裙</a>
+						<a href="${ pageContext.request.contextPath }/product.do?p=findByPid&pid=${p.pid}">性感V领蕾丝网纱沙滩裙</a>
 					</div>
 				  </div>
-				</s:iterator>
+				</s:forEach>
 			</div>
 		
 		<!-----------------6区开始-------------->

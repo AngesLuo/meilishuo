@@ -36,6 +36,7 @@ public class IndexAction{
 		List<Product> nList=productService.findNew();
 		request.setAttribute("CList",CList);
 		request.setAttribute("nList", nList);
+		request.setAttribute("hList", nList);
 		return "/WEB-INF/jsp/index.jsp";
 	}
 }

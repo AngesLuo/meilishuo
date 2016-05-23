@@ -175,6 +175,7 @@ public class ProductDAO extends HibernateDaoSupport {
 
 	//首页流行的商品查询
 	public List<Product> findHot() {
+		System.out.println("lai2");
 		//带有分页查询:使用离线查询；还有使用this.hibernate..
 		DetachedCriteria criteria=DetachedCriteria.forClass(Product.class);
 		//条件是is_host=1
@@ -183,13 +184,22 @@ public class ProductDAO extends HibernateDaoSupport {
 		criteria.addOrder(Order.desc("pdate"));
 		//执行查询
 		List<Product> list=this.getHibernateTemplate().findByCriteria(criteria,0,10);
-		return list;
+		System.out.println(list.size());
+		if(list.size()>0){
+			return list;
+		}else{
+			return null;
+		}
 	}
 	//首页商品最新查询
 	public List<Product> findNew() {
 		DetachedCriteria criteria=DetachedCriteria.forClass(Product.class);
 		criteria.addOrder(Order.desc("pdate"));
 		List<Product> list=this.getHibernateTemplate().findByCriteria(criteria,0,10);
-		return list;
+		if(list.size()>0){
+			return list;
+		}else{
+			return null;
+		}
 	}
 }
