@@ -351,14 +351,14 @@
 				<s:forEach items="${hList}" var="p">
 					<div class="tp3_2">
 					<div class="tp3_3">
-						<img src="${pageContext.request.contextPath}/${p.pid}" alt="" />
+						<img src="${pageContext.request.contextPath}/${p.image}" alt="" />
 					</div>
 					<div class="tp3_4">
-						<span class="jg">￥${listqiang.shop_price}</span>
-						<span class="linek">￥${listqiang.market_price}</span>
+						<span class="jg">￥${p.shopPrice}</span>
+						<span class="linek">￥${p.marketPrice}</span>
 					</div>
 					<div class="tio">
-						<a href="${ pageContext.request.contextPath }/product.do?p=findByPid&pid=${p.pid}">性感V领蕾丝网纱沙滩裙</a>
+						<a href="${ pageContext.request.contextPath }/product.do?p=findByPid&pid=${p.pid}">${p.pname}</a>
 					</div>
 				  </div>
 				</s:forEach>	   
@@ -374,17 +374,17 @@
 			</div>
 			</div>
 			<div class="tp3_1">
-				<s:forEach items="${hList}" var="p">
+				<s:forEach items="${nList}" var="p">
 					<div class="tp3_2">
 					<div class="tp3_3">
-						<img src="${pageContext.request.contextPath}/${p.pid}" alt="" />
+						<img src="${pageContext.request.contextPath}/${p.image}" alt="" />
 					</div>
 					<div class="tp3_4">
-						<span class="jg">￥${listqiang.shop_price}</span>
-						<span class="linek">￥${listqiang.market_price}</span>
+						<span class="jg">￥${p.shopPrice}</span>
+						<span class="linek">￥${p.marketPrice}</span>
 					</div>
 					<div class="tio">
-						<a href="${ pageContext.request.contextPath }/product.do?p=findByPid&pid=${p.pid}">性感V领蕾丝网纱沙滩裙</a>
+						<a href="${ pageContext.request.contextPath }/product.do?p=findByPid&pid=${p.pid}">${p.pname}</a>
 					</div>
 				  </div>
 				</s:forEach>
