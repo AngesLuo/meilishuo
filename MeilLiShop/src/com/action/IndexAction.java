@@ -32,7 +32,7 @@ public class IndexAction{
 		List<Category> CList=categoryService.findAll();
 		//查询热门商品
 		List<Product> hList=productService.findHot();
-		//查询最新商品
+		//查询最新商品    11
 		List<Product> nList=productService.findNew();
 		request.setAttribute("CList",CList);
 		request.setAttribute("nList", nList);
