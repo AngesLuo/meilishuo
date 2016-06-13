@@ -2,6 +2,7 @@ package com.dao;
 
 import java.util.List;
 import java.util.Set;
+
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 import org.hibernate.LockMode;
@@ -37,6 +38,16 @@ public class UserDAO extends HibernateDaoSupport {
 		// do nothing
 	}
 
+	
+	 //按照名字查询是否有该用户
+		public User findByUsername(String username){
+			String hql = "from User where username = ?";
+			List<User> list = this.getHibernateTemplate().find(hql, username);
+			if(list != null && list.size() > 0){
+				return list.get(0);
+			}
+			return null;
+		}
 	public void save(User transientInstance) {
 		log.debug("saving User instance");
 		try {
@@ -177,4 +188,16 @@ public class UserDAO extends HibernateDaoSupport {
 	public static UserDAO getFromApplicationContext(ApplicationContext ctx) {
 		return (UserDAO) ctx.getBean("UserDAO");
 	}
+	
+	
+	
+	//用户登录
+		public User login(User user) {
+			String hql="from User where username=? and password=? ";
+			List<User> list=this.getHibernateTemplate().find(hql,user.getUsername(),user.getPassword(),1);
+			if(list != null && list.size() > 0){
+				return list.get(0);
+			}
+			return null;
+		}
 }

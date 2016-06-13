@@ -17,24 +17,17 @@
 		<div id="top">
 			<div class="topz">
 				<ul>
-				   <li class="line1"><a href=""><em class="wx"></em>微信登录</a></li>
-				   <li class="line2"><a href=""><em class="qq"></em>QQ登录</a></li>
-				   <li class="line3"><a href="./login.html">登录</a></li>
+			
+				   <li class="line3"><a href="./login.jsp">登录</a></li>
 				   <li class="line4"><a href="./register.html">注册</a></li>
 				   <li class="line5"><a href="./cart.html"><em class="gwc"></em>我的购物车<span class="tip">0</span></a></li>
 				   <li class="line6"><a href="./order.html"><em class="dtan"></em>我的订单</a></li>
-				   <li class="line7"><a href=""><em class="hyuan"></em>美丽说会员</a></li>
+				   <li class="line7"><a href=""><em class="hyuan"></em></a></li>
 				   <li class="line8">
-				   	<a href=""><em class="app"></em>下载App<em class="arrow"></em></a>
-				   	<ul style="display: none;">
-				   		<li class="sao">
-				   			<img src="${pageContext.request.contextPath}/image/sao.jpg"/>
-				   			<p style="font-size: 14px;color: #FF6699;">美丽说客服端</p>
-				   			<p style="color: #666666;">发现流行，只做正确流行款</p>
-				   		</li>
-				   	</ul>
+				  
+				   
 				   </li>
-				   <li class="line9"><a href="" style="border: none;">帮助中心</a></li>
+				  
 				</ul>
 			</div>
 		</div>
